@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.eisenhower-matrix-img {
+.header__img {
   width: 100%;
 }
 
-.header .more-info-link {
+.header__link {
   font-family: fantasy, cursive;
 }
 
@@ -38,7 +38,7 @@
   flex-grow: 1;
 }
 
-.task-wrapper {
+.new-task__wrapper {
   display: flex;
 }
 
@@ -72,8 +72,9 @@ button {
 }
 
 /* Heading */
-.tasks-list-heading,
-.new-task-label {
+.finished-tasks__heading,
+.todo-tasks__heading,
+.new-task__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -101,17 +102,17 @@ button {
 }
 
 /* New Task */
-.new-task-label {
+.new-task__label {
   display: block;
   margin: 0 0 20px;
 }
 
-#new-task {
+.new-task__input {
   width: 318px;
 }
 
 /* Task list */
-.task-list-item {
+.tasks-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -120,22 +121,25 @@ button {
   align-items: center;
 }
 
-.task-list-item > * {
+.tasks-list__item > * {
   vertical-align: middle;
 }
 
-.task-list-checkbox {
+.tasks-list__checkbox {
   margin: 0 10px;
 }
 
-.task-label {
+.tasks-list__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
 }
 
-.task-list-input {
+.tasks-list__input {
   width: 226px;
 }
 
@@ -150,21 +154,21 @@ button {
 }
 
 /* Completed */
-.completed-task-label {
+.tasks-list__label_completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task-list-input {
+.tasks-list__input {
   display: none;
 }
 
-.edit-mode .task-list-input {
+.tasks-list__item_edit .tasks-list__input {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task-label {
+.tasks-list__item_edit .tasks-list__label {
   display: none;
 }
